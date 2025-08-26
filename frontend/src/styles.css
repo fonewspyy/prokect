@@ -1,0 +1,373 @@
+:root {
+  --green-0: #eaf7e9; /* page bg tint */
+  --green-1: #cfe8c6; /* hero bg */
+  --green-2: #a6d4b1; /* accents */
+  --green-3: #0f7a40; /* dark text/btn */
+  --ink: #1f2937;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  background: var(--green-0);
+  color: var(--ink);
+  display: flex;
+  justify-content: center;
+}
+.page {
+  width: 100%;
+  max-width: 1200px;
+  padding: 28px 22px 36px;
+}
+
+/* HERO */
+.hero {
+  background: #a4d190;
+  border-radius: 16px;
+  padding: 18px 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  margin-bottom: 16px;
+}
+.brand {
+  position: relative;
+  width: 84px;
+  height: 84px;
+  display: grid;
+  place-items: center;
+}
+.brand-mark {
+  width: 84px;
+  height: 84px;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+  font-weight: 900;
+  font-size: 38px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22) inset,
+    0 2px 0 rgba(255, 255, 255, 0.12);
+}
+.brand-ribbon {
+  position: absolute;
+  bottom: -10px;
+  width: 70px;
+  height: 18px;
+  background: gold;
+  border-radius: 0 0 18px 18px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+.hero-copy h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #1c2b22;
+}
+.hero-copy h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #2d3b33;
+  opacity: 0.9;
+}
+.badge {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.badge.ok {
+  background: #e7f8ef;
+  color: #0f7a40;
+  border: 1px solid #bde8cf;
+}
+.badge.bad {
+  background: #fdecec;
+  color: #a50e0e;
+  border: 1px solid #f6c5c5;
+}
+
+/* Upload row (pills) */
+.upload-row {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+.upload-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #15520f;
+  color: #fff;
+  font-weight: 800;
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.upload-pill input {
+  display: none;
+}
+.filename {
+  flex: 1;
+  background: #fff;
+  color: #241456;
+  border: 2px solid #e7e7ee;
+  border-radius: 999px;
+  padding: 10px 14px;
+  min-width: 160px;
+  font-weight: 700;
+}
+.cta-dark {
+  background: #323c34;
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.16);
+}
+.cta-dark:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.extra-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 4px 18px;
+  color: #374151;
+}
+.extra-controls input[type="range"] {
+  width: 200px;
+  accent-color: #0f7a40;
+}
+
+/* Guide */
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+.guide {
+  padding: 14px 16px;
+}
+.guide ol {
+  margin: 0;
+  padding-left: 22px;
+}
+.guide li {
+  margin: 6px 0;
+  font-weight: 600;
+}
+
+/* Two columns */
+.result-layout {
+  display: flex;
+  gap: 18px;
+  width: 100%;
+  margin-top: 16px;
+}
+.result-left {
+  flex: 1.1;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #88a56a;
+}
+.result-right {
+  padding: 18px;
+  max-height: 650px;
+  overflow: auto;
+}
+.result-title {
+  margin: 2px 0 12px;
+  font-size: 20px;
+  font-weight: 900;
+  color: #0b3d2e;
+}
+.empty {
+  color: #0f7a40;
+  font-weight: 700;
+}
+
+/* Leaf frame (วงกลมซ้อนรูปภาพ) */
+.leaf-frame {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 1.4 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-wrap {
+  position: relative;
+  width: 100%;
+}
+.img-wrap img {
+  width: 100%;
+  height: auto;
+  max-height: 62vh;
+  display: block;
+  object-fit: contain;
+  border-radius: 12px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+.bbox {
+  position: absolute;
+  border: 2px solid;
+  border-radius: 6px;
+}
+.bbox .label {
+  position: absolute;
+  top: -22px;
+  left: 0;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.bbox.ok {
+  border-color: #0ea5e9;
+}
+.bbox.ok .label {
+  background: rgba(14, 165, 233, 0.85);
+}
+
+/* Disease card on right */
+.disease-card {
+  background: #2f3b34;
+  color: #eef6f1;
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.disease-name {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.section {
+  margin-top: 6px;
+}
+.section-title {
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.bullets {
+  margin: 0;
+  padding-left: 20px;
+}
+.bullets li {
+  margin: 4px 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .result-layout {
+    flex-direction: column;
+  }
+  .result-right {
+    max-height: unset;
+  }
+}
+
+/* Footer */
+.footnote {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #5b6a5f;
+  text-align: center;
+}
+
+.result-right.card.nice-fade {
+  background: var(--green-0);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 18px;
+  max-height: 650px;
+  overflow: auto; /* allow scroll */
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.result-right.card.nice-fade::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.result-right.card.nice-fade {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.disease-name .order {
+  font-weight: 900;
+  margin-right: 4px;
+}
+.disease-name .th {
+  font-weight: 900;
+}
+.disease-name .en {
+  opacity: 0.9;
+  font-weight: 800;
+}
+.disease-name .conf {
+  font-weight: 800;
+}
+.hero-copy h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff; /* ← เปลี่ยนเป็นสีขาว */
+}
+
+.hero-copy h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff; /* ← เปลี่ยนเป็นสีขาว */
+  opacity: 0.9;   /* จะให้จางลงนิดก็ได้ */
+}
+.brand {
+  position: relative;
+  width: 120px;       /* เว้นขอบรอบ ๆ */
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-logo {
+  width: 120x;       /* โลโก้ขนาด 100px */
+  height: 120px;
+  object-fit: contain; /* ไม่ให้บิดเบี้ยว */
+}
