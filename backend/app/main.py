@@ -12,7 +12,10 @@ from ultralytics import YOLO
 from .disease_info import DISEASE_ADVICE, HEALTHY_CLASSES
 
 MODEL_PATH = os.getenv("MODEL_PATH", os.path.join(os.path.dirname(__file__), "..", "models", "best.pt"))
-ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "https://prokect.vercel.app", "http://localhost:5173").split(",")
+ALLOWED_ORIGINS = os.getenv(
+    "ALLOWED_ORIGINS",
+    "https://prokect.vercel.app,http://localhost:5173"
+).split(",")
 
 app = FastAPI(title="Leaf Scan API", version="1.0.0")
 
